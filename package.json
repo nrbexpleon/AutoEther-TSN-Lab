@@ -1,0 +1,1 @@
+{"name":"autoether-tsn-lab","version":"0.1.0","private":true,"license":"UNLICENSED","type":"module","scripts":{"start":"node src/server.mjs","demo":"node examples/run-simulation.mjs","test":"node --test test/*.test.mjs","check":"node --check src/server.mjs && node --check src/domain/simulator.mjs"},"engines":{"node":">=20"}}

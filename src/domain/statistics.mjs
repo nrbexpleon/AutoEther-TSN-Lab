@@ -1,0 +1,1 @@
+export const mean=v=>v.length?v.reduce((a,b)=>a+b,0)/v.length:0;export function percentile(v,p){if(!v.length)return 0;const s=[...v].sort((a,b)=>a-b);return s[Math.min(s.length-1,Math.ceil(s.length*p)-1)]}
