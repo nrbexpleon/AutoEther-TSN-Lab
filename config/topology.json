@@ -1,0 +1,7 @@
+{
+  "name":"zonal-tsn-reference",
+  "nodes":[{"id":"front-zone"},{"id":"tsn-switch"},{"id":"central-compute"}],
+  "links":[{"id":"front-uplink","from":"front-zone","to":"tsn-switch","speedMbps":1000,"propagationUs":5},{"id":"central-downlink","from":"tsn-switch","to":"central-compute","speedMbps":1000,"propagationUs":5}],
+  "streams":[{"id":"camera-control","source":"front-zone","destination":"central-compute","periodUs":1000,"payloadBytes":512,"deadlineUs":200,"priority":7,"vlan":10},{"id":"diagnostics","source":"front-zone","destination":"central-compute","periodUs":10000,"payloadBytes":1200,"deadlineUs":3000,"priority":2,"vlan":20}],
+  "gates":{"front-uplink":{"cycleUs":1000,"windows":[{"openUs":0,"closeUs":250,"priorities":[7]},{"openUs":250,"closeUs":1000,"priorities":[0,1,2,3,4,5,6]}]},"central-downlink":{"cycleUs":1000,"windows":[{"openUs":0,"closeUs":250,"priorities":[7]},{"openUs":250,"closeUs":1000,"priorities":[0,1,2,3,4,5,6]}]}}
+}

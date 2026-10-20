@@ -1,0 +1,1 @@
+{"seed":42,"durationUs":20000,"faults":[{"id":"latency-burst","type":"latency","link":"central-downlink","atUs":7000,"durationUs":2000,"valueUs":60},{"id":"diag-loss","type":"packet-loss","link":"front-uplink","atUs":10000,"durationUs":2000,"probability":0.25}]}
